@@ -15,3 +15,7 @@ class test1 extends Module{
   }
   io.clk := blkReg
 }
+
+object convert2 extends App{
+  (new chisel3.stage.ChiselStage).emitVerilog(new test1)
+}
